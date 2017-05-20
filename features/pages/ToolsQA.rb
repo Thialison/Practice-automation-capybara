@@ -1,5 +1,5 @@
 class Toolsqa < SitePrism::Page
-    set_url "http://toolsqa.com/"
+    set_url (SITE["SITE"])
     element :demoSite, "li", text: "DEMO SITES"
     element :automationForm, :xpath, ("html/body/div[1]/div[1]/header/nav/ul/li[8]/ul/li[3]/a/span[1]/span/span")
     element :firstName, ('input[name=firstname]')

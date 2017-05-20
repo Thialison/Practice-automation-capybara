@@ -3,10 +3,11 @@ require 'capybara/dsl'
 require 'selenium-webdriver'
 require 'pry'
 require 'site_prism'
+require 'faker'
 
 include Capybara::DSL
 
-
+SITE = (YAML.load_file("./features/fixture/site.yml"))
 INF = (YAML.load_file('./features/fixture/massa.yml'))
 # https://github.com/teamcapybara/capybara#key-benefits
 # Definir browser para rodar os testes

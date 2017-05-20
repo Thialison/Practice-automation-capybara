@@ -9,9 +9,10 @@ end
 
 Quando(/^preencher as informações pessoais$/) do
 
-
-    @Page.firstName.set (INF["INFORMACOES"]["FIRSTNAME"])
-    @Page.lastName.set (INF["INFORMACOES"]["LASTNAME"])
+    #@Page.firstName.set (INF["INFORMACOES"]["FIRSTNAME"])
+    #@Page.lastName.set (INF["INFORMACOES"]["LASTNAME"])
+    @Page.firstName.set(Faker::HarryPotter.character)
+    @Page.lastName.set(Faker::Name.last_name)
     @Page.sexo.click
     @Page.experience.click
     @Page.dataNasc.set(INF["INFORMACOES"]["DATANASCIMENTO"])
