@@ -1,6 +1,5 @@
-pipeline {
-    agent { docker 'ruby' }
-    stages {
+node {
+        stages {
         stage('build') {
             steps {
                 sh 'rake'
