@@ -6,6 +6,7 @@ node {
     }
 
     stage('build') {
+        sh 'bundle'
         sh 'rake'
     }
 }

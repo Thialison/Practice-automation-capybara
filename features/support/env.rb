@@ -1,11 +1,9 @@
 require 'rspec'
-require 'capybara/dsl'
-require 'selenium-webdriver'
+require 'capybara/cucumber'
 require 'pry'
 require 'site_prism'
 require 'faker'
-
-include Capybara::DSL
+require 'selenium-webdriver'
 
 SITE = (YAML.load_file("./features/fixture/site.yml"))
 INF = (YAML.load_file('./features/fixture/massa.yml'))
@@ -16,6 +14,6 @@ Capybara.register_driver :selenium do |app|
 end
 
 #Configurações do Capybara
-Capybara.current_driver = :selenium
+Capybara.default_driver = :selenium
 Capybara.page.driver.browser.manage.window.maximize
 Capybara.default_max_wait_time = 15
