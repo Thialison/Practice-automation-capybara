@@ -1,7 +1,5 @@
 node {
     stage('build') {
-        steps {
-           sh 'rake'
-        }
+        sh 'rake'
     }
 }
