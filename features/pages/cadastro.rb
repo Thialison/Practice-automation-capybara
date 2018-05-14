@@ -1,5 +1,3 @@
-require 'rspec'
-
 class Cadastro < SitePrism::Page
 
     element :sucess_message, ".piereg_message"

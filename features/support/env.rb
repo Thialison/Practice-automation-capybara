@@ -6,7 +6,6 @@ require 'faker'
 require 'selenium-webdriver'
 
 SITE = (YAML.load_file("./features/fixture/site.yml"))
-INF = (YAML.load_file('./features/fixture/massa.yml'))
 # https://github.com/teamcapybara/capybara#key-benefits
 # Definir browser para rodar os testes
 Capybara.register_driver :selenium do |app|
